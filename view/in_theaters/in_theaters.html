@@ -1,22 +1,26 @@
 <div class="container">
-  <h3 class="page-header">页面标题</h3>
+  <h3 class="page-header">{{result.title}}</h3>
   <div class="row">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4" ng-repeat="item in result.subjects">
       <div class="thumbnail">
         <div class="img-box">
-          <img src="">
+          <img ng-src="{{item.images.large}}">
         </div>
         <div class="caption">
 
-          <h4></h4>
+          <h4>{{item.title}}</h4>
+
           <p>
-            导演：
+            导演：<span ng-repeat="director in item.directors">{{director.name}} {{  $last?'':'、'}}</span>
           </p>
+
           <p>
-            主演：
+            主演： <span ng-repeat="cast in item.casts">{{cast.name}} {{ $last ? '' : '、' }}</span>
           </p>
-          <p>年份：</p>
-          <p>评分：</p>
+
+          <p>年份：{{item.year}}</p>
+
+          <p>评分：{{item.rating.average}}</p>
         </div>
       </div>
     </div>
