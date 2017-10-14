@@ -14,9 +14,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a ui-sref="in_theaters({page:1})">正在热映</a></li>
-        <li><a ui-sref="comming_soon({page:1})">即将上映</a></li>
-        <li><a >Top250</a></li>
+        <li ui-sref-active="active"><a ui-sref="in_theaters({page:1})">正在热映</a></li>
+        <li ui-sref-active="active"><a ui-sref="comming_soon({page:1})">即将上映</a></li>
+        <li ui-sref-active="active"><a >Top250</a></li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -31,5 +31,11 @@
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-ui-router/angular-ui-router.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/route.js"></script>
+<script src="js/service.js"></script>
+<script src="view/comming_soon/comming_soonCtrl.js"></script>
+<script src="view/in_theaters/in_theatersCtrl.js"></script>
+<script src="view/search/searchCtrl.js"></script>
+
 </body>
 </html>
